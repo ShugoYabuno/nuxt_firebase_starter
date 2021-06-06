@@ -5,14 +5,14 @@ const nuxtConfig: NuxtConfig = {
   head: {
     title: 'nuxt_firebase_starter',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -28,14 +28,34 @@ const nuxtConfig: NuxtConfig = {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    '@nuxtjs/composition-api/module',
+    '@nuxtjs/composition-api/module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/firebase'],
+
+  firebase: {
+    config: {
+      apiKey: '<apiKey>',
+      authDomain: '<authDomain>',
+      projectId: '<projectId>',
+      storageBucket: '<storageBucket>',
+      messagingSenderId: '<messagingSenderId>',
+      appId: '<appId>',
+      measurementId: '<measurementId>'
+    },
+    services: {
+      auth: true
+      // firestore: true,
+      // database: true,
+      // storage: true,
+      // functions: true,
+      // performance: true,
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {}
 }
 
 export default nuxtConfig
