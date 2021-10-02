@@ -1,0 +1,33 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Backpack build
+build
+
+/.sass-cache
+.sass-cache
+
+# env
+.env
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+package-lock.json
+routerOption.js
+.gitignore
+
+/static/js/newrelic/*
+
+api/lib/scripts/*

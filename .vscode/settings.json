@@ -1,12 +1,25 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  // 以下でSave時の動きを設定
   "editor.formatOnSave": true,
-  "eslint.validate": [
-    "typescript"
-  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  // 以下でVSCodeの他の機能によるフォーマットとの競合を防ぐ
+  "eslint.validate": ["javascript", "vue", "vue-html", "html"],
+  "vetur.format.enable": false,
+  "html.format.enable": false,
+  "vetur.validation.template": false,
+  "javascript.format.enable": false,
+  "json.format.enable": false,
+  "vetur.validation.script": false,
+  // "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "vetur.validation.style": false,
+  "editor.suggestSelection": "first",
+  "editor.quickSuggestions": {
+    "strings": true
+  }
 }
